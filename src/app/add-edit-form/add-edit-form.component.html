@@ -1,0 +1,132 @@
+<div class="main_div">
+    <header>
+       <div class="example-button-row ">
+          <button mat-raised-button color="primary" class="ml-2" (click)="fngoto()">Home</button>
+          <button mat-raised-button color="warn" class="ml-2" (click)="fnlogout()">Log Out</button>
+       </div>
+    </header>
+ </div>
+ <div>
+    <mat-card class="m-0 cardLayout">
+       <mat-card-content>
+          <form #heroForm="ngForm" novalidate (ngSubmit)="heroForm.form.valid && onSubmit(heroForm)">    
+          <div *ngFor="let item of service.BulkArray;let i = index" class="flex">
+            <div class="ClasItem">
+                <div class="mb-2">
+                    <mat-form-field class="demo-full-width">
+                       <input matInput placeholder="Name" id="empname{{i}}" [(ngModel)]="item.empName" name="empname{{i}}" required>    
+                       <div *ngIf="firstname?.dirty || firstname?.touched" class="error">
+                          <div *ngIf="firstname.errors.required">first name required</div>
+                       </div>
+                    </mat-form-field>
+                 </div>
+                 <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">
+                       <mat-select placeholder="Project Type" multiple>
+                          <mat-option>-- Select Any --</mat-option>
+                          <mat-option *ngFor="let toppingLists of project_type" [value]="toppingLists.id">
+                          {{toppingLists.name}}
+                          </mat-option> 
+                       </mat-select>
+                    </mat-form-field>
+                 </div>
+                 <!-- <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">
+                       <mat-select placeholder="Active Status" [(ngModel)]="item.empName" name="status">    
+                       <mat-option>-- Select Any --</mat-option>
+                       <mat-option *ngFor="let active of active_inactive" [value]="active.id">
+                       {{active.name}}
+                       </mat-option> 
+                       </mat-select>  
+                    </mat-form-field>
+                 </div> -->
+                 <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">
+                       <mat-select placeholder="Grade" >
+                          <mat-option>-- Select Any --</mat-option>
+                          <mat-option *ngFor="let assign of assigned_grade" [value]="assign.id">
+                          {{assign.name}}
+                          </mat-option> 
+                       </mat-select>
+                    </mat-form-field>
+                 </div>
+                 <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">
+                       <mat-select placeholder="Classification" >
+                          <mat-option>-- Select Any --</mat-option>
+                          <mat-option *ngFor="let classify of final_classification" [value]="classify.id">
+                          {{classify.name}}
+                          </mat-option> 
+                       </mat-select>
+                    </mat-form-field>
+                 </div>
+             
+                 <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">    
+                       <textarea matInput placeholder="Address" matTextareaAutosize matAutosizeMinRows="1" matAutosizeMaxRows="5"></textarea>    
+                    </mat-form-field>
+                 </div>
+            </div>
+            <div class="ClasItem">
+                <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">
+                       <mat-select placeholder="Project Exe" >
+                          <mat-option>-- Select Any --</mat-option>
+                          <mat-option *ngFor="let exeproj of project_exec_bu" [value]="exeproj.id">
+                          {{exeproj.name}}
+                          </mat-option> 
+                       </mat-select>
+                    </mat-form-field>
+                 </div>
+                <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">
+                       <mat-select placeholder="LMS status"  [(ngModel)]="item.lmsStatusId" name="lmsstatus">    
+                       <mat-option>-- Select Any --</mat-option>
+                       <mat-option *ngFor="let exeproj of lms_status" [value]="exeproj.id">
+                       {{exeproj.name}}
+                       </mat-option> 
+                       </mat-select>     
+                    </mat-form-field>
+                 </div>
+                 <div class="mb-2">
+                    <mat-form-field class="demo-full-width">
+                       <mat-select placeholder="Module"  multiple [(ngModel)]="item.modulearray" name="module{{i}}" required>    
+                       <mat-option>-- Select Any --</mat-option>
+                       <mat-option *ngFor="let mod of modules" [value]="mod.id">
+                       {{mod.name}}
+                       </mat-option> 
+                       </mat-select>    
+                    </mat-form-field>
+                 </div>
+                 <div class="mb-2" *ngIf="!service.addEditFlag">
+                    <mat-form-field class="demo-full-width">
+                       <input matInput [matDatepicker]="picker" [(ngModel)]="item.enrollmentDate" name="date" placeholder="Enrollment Date">    
+                       <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                       <mat-datepicker touchUi="true" #picker></mat-datepicker>
+                    </mat-form-field>
+                 </div>
+                
+                 <div class="mb-2" *ngIf="!service.addEditFlag"> 
+                    <mat-form-field class="demo-full-width">    
+                       <input matInput placeholder="Email">    
+                    </mat-form-field>
+                 </div>
+                 <div class="mb-2" *ngIf="!service.addEditFlag">
+                  <p>Gender</p>
+                    <mat-radio-group>
+                       <mat-radio-button value="1">Male</mat-radio-button>
+                       <mat-radio-button value="2">Female</mat-radio-button>
+                    </mat-radio-group>
+                 </div>
+               
+            </div>
+           
+            
+          </div>
+          <div>
+            <button mat-raised-button color="accent" type="submit">Submit</button>    
+         </div>
+          </form>    
+       </mat-card-content>
+    </mat-card>
+ </div>

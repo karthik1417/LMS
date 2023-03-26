@@ -1,0 +1,93 @@
+  
+    
+.demo-toolbar {    
+    display: flex;    
+    align-items: center;    
+    width: 100%;    
+ 
+}    
+    
+.demo-form {    
+    min-width: 150px;    
+    max-width: 500px;    
+    width: 100%;    
+}    
+    
+.demo-full-width {    
+    width: 100%;    
+}    
+    
+body {    
+    margin: 0;    
+    font-family: Roboto, sans-serif;    
+}    
+    
+   
+    
+mat-toolbar-row {    
+    justify-content: space-between;    
+}    
+    
+.done {    
+    position: fixed;    
+    bottom: 20px;    
+    right: 20px;    
+    color: white;    
+}    
+    
+
+
+  button{
+    margin: 3px;
+  }
+
+  .footer {
+    position: fixed;
+    /* right: 3%; */
+    bottom: 2%;
+    width: 100%;
+    margin-right: 5px;
+    color: white;
+    text-align: end;
+ }
+ .flex{
+    display: flex;
+    row-gap: 10px;
+    justify-content: space-between;
+    column-gap: 10px;
+    overflow: auto;
+    max-height: calc(100vh - 172px);
+    flex-wrap: wrap;
+ }
+ header{
+    background-color: var(--grey);
+    padding: 10px;
+    border-bottom: 1px solid var(--drakgrey);
+ }
+ .cardLayout{
+    background-color: var(--white);
+    border: 1px solid var(--drakgrey);
+    box-shadow: var(--box_shadow);
+    width: 60%;
+    margin: 20px auto;
+ }
+ .ClasItem{
+   flex:1 1 45%;
+ }
+ .mat-radio-group{
+    display: flex;
+    align-items: self-start;
+    row-gap: 20px;
+    column-gap: 50px;
+ }
+ 
+.mb-2{
+  padding: 5px 0px;
+  margin: 5px;
+}
+ @media (max-width: 1024px) {
+  .cardLayout{
+    width: auto;
+    margin:10px;
+  }
+ }

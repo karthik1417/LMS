@@ -1,0 +1,84 @@
+
+/* ==================New Root Css style Start here =======================*/
+:root {
+
+    /* ===========Primary Blue Colors Start Here ====== */
+  
+    --blue_light: #616e88 !important;
+    --oddcolorblue: rgb(186 227 242 / 18%)  !important;
+    --skyblue: #1ebff0 !important;
+    --newbluecolor: #009ac7 !important;
+    --lightcolor: #21b2e1 !important;
+    --multigird: #90d8f0 !important;
+    --skybluelight: #bde3f3 !important;
+    --grey_blue: #5b809d !important;
+    --drakblue: #1c3758 !important;
+    --gradeblue: #2f88ed;
+    --purple: #6a65fd !important;
+    --white_mild: #f2ffff;
+    --checkboxcolor:#2196f3;
+    --gradientbtn: linear-gradient(260deg, #245288, #18263e) !important;
+    --gradientbtn: -o-linear-gradient(190deg, #245288, #18263e);
+  
+    /* ===========Primary Blue Colors End Here ====== */
+  
+     /* =========== Secondary  Pink Colors Start Here ====== */
+  
+     --pink: #CF2379 !important;
+     --pinkgreylight:#f1aed0 !important;
+     --pink_secondary: #eb308a24 !important;
+     --oddcolorpink: rgb(250 172 206 / 15%) !important;
+  
+    /* =========== Secondary  Pink Colors End Here ====== */
+  
+    /* =========== Grey  Pink Colors Start Here ====== */
+  
+    --grey: #e9ecef !important;
+    --drakgrey: #8c9197 !important;
+    --lightgrey: #c5c5c5 !important;
+    --formgrey:#c3c6ca;
+    --tabbg:#f3f3f3f0 !important;
+    --labelgrey:#f9f9f9;
+    --alertgreen: #6fc588;
+    --body_white: #f6f7fa;
+    --white_grey: #ddd;
+    --nocolor:#727272;
+    --calendarcellhover : rgb(245 245 245);
+    --inputBgcolor: rgba(255, 255, 255, 9%) !important;
+    --googlecolor: #dadce0 !important;
+  
+    /* =========== Grey  Pink Colors Start Here ====== */
+  
+      --white: #ffffff !important;
+      --black: #010002 !important;
+      --red: red !important;
+      --mat_active: #8eaf3c !important;
+      --green: green !important;
+  
+  
+    /* =========== Shadow   Colors Start Here ====== */
+  
+      --box_shadow: 0 2px 6px 0 rgb(0 0 0 / 10%), 0 2px 6px 0 rgb(0 0 0 / 10%) !important;
+      --box_shadow_hover: 0 0px 2px 0 var(--skyblue), 0 0px 2px 0 var(--skyblue) !important;
+      --cardshadow: 0px 1px 11px 1px rgb(4 105 141 / 18%) !important;
+      --radius: 5px !important;
+  
+    /* =========== Shadow  Colors End Here ========= */
+  
+  
+    /* =========== Another Global Colors Start Here ========= */
+  
+      --lightorange: #fff7dd;
+      --lightgreen: #dbf2e1;
+      --lightdrakorange: #ffd58c;
+      --mandatory: #ff8c93;
+      --mandatorystar: #dc3545;
+      --lightmadatory: #ffeded;
+      --success_delete: #779eca;
+      --alert_danger:#da5161;
+      --alert_success: #70c48f;
+    }
+  
+   /* =========== Another Global Colors End Here ========= */
+  
+    /* ==================New Root Css style End here =======================*/

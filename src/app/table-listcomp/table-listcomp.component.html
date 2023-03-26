@@ -1,0 +1,75 @@
+<div class="main_div">
+    <section>
+      <div class="example-button-row ">
+        <button mat-raised-button color="warn" class="ml-2" (click)="fngoto()">Home</button>
+        <button mat-raised-button color="primary" (click)="fnAddData()" class="ml-2">  + ADD  </button>
+        <button mat-raised-button color="accent" (click)="fnEditrOWS()" class="ml-2" *ngIf="!service.addEditFlag"> EDIT </button>
+        <button mat-raised-button color="warn" class="ml-2" (click)="fnlogout()">Log Out</button>
+      </div>
+    </section>
+</div>
+<div class="row-cust">
+  <div class="col-6">
+    <mat-form-field>
+      <input matInput class="form-field" [formControl]="nameFilter" placeholder="Search Employee Name">
+    </mat-form-field>
+  </div>
+  <div class="col-6">
+    <mat-form-field style="margin-left: 15px;">
+      <mat-select class="form-field"  [formControl]="statusFilter">
+        <mat-option value="">Select Enrollment Status</mat-option>
+        <mat-option [value]="filter.name" *ngFor="let filter of lms_status">{{filter.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<div class="mat-elevation-z8 CardLayout">
+    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+      <!-- Checkbox Column -->
+      <ng-container matColumnDef="select" >
+        <th mat-header-cell *matHeaderCellDef >
+        </th>
+        <td mat-cell *matCellDef="let element;let i=index">
+                <mat-checkbox [(ngModel)]="element.checked" (change)=updateCheckedList($event,i) *ngIf="!service.addEditFlag"></mat-checkbox>
+        </td>
+      </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="enrollmentId">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by name"> Enrollment ID. </th>
+        <td mat-cell *matCellDef="let element"> {{element.enrollmentId}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="empName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight"> Employee Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.empName}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="dueDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight"> Due Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.dueDate}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="lmsStatus">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol"> Enrollment Status 
+          
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.lmsStatus}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+      <tr class="table-row" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter</td>
+      </tr>
+    </table>
+  
+    <mat-paginator class="mat-paginator-sticky" [pageSizeOptions]="[10,15,20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+  
+  
