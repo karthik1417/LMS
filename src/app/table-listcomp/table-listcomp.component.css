@@ -1,152 +1,191 @@
 table {
-    width: 100%;
-    height: 100% !important;
-  }
-  section {
-    display: table;
-  }
-  
-  .example-label {
-    display: table-cell;
-    font-size: 14px;
-    margin-left: 8px;
-    min-width: 120px;
-  }
-  
-  .example-button-row {
-    display: table-cell;
-    max-width: 600px;
-  }
-  
-  .example-button-row .mat-mdc-button-base {
-    margin: 8px 8px 8px 0;
-  }
-  
-  .example-flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .example-button-container {
-    display: flex;
-    justify-content: center;
-    width: 120px;
-  }
+  width: 100%;
+  height: 100% !important;
+}
+section {
+  display: table;
+}
 
-  button{
-    margin: 3px;
-  }
-  
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+button{
+  margin: 3px;
+}
+
 .CardLayout{
-  background-color: var(--white);
-  border: 1px solid var(--drakgrey);
-  box-shadow: var(--box_shadow);
-  margin: 10px;
-  /* height: calc(100vh - 130px); */
-  /* overflow: auto; */
+background-color: var(--white);
+border: 1px solid var(--grey);
+box-shadow: var(--box_shadow);
+margin: 15px;
+max-height: calc(100vh - 170px);
+/* overflow: auto; */
+/* height: calc(100vh - 130px); */
+/* overflow: auto; */
 }
 .row-cust{
-  display: flex;
-  margin: 1%;
+display: flex;
+margin:5px;
 }
 
 .mat-paginator-sticky {
-  bottom: 0px;
-  position: sticky;
-  z-index: 10;
+bottom: 0px;
+position: sticky;
+z-index: 10;
 }
 
 table{
-  width: 100%;
-  /* min-height: 481px;
-  max-height: 390px;
-  overflow: auto !important; */
- }
- 
+width: 100%;
+/* min-height: 481px;
+max-height: 390px;
+overflow: auto !important; */
+}
+
 .mat-column-select {
-  word-wrap: break-word !important;
-  white-space: unset !important;
-  flex: 0 0 28% !important;
-  width: 5% !important;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+word-wrap: break-word !important;
+white-space: unset !important;
+flex: 0 0 28% !important;
+width: 5% !important;
+overflow-wrap: break-word;
+word-wrap: break-word;
 
-  word-break: break-word;
+word-break: break-word;
 
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+-ms-hyphens: auto;
+-moz-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;
 }
 .mat-column-enrollmentId {
-  word-wrap: break-word !important;
-  white-space: unset !important;
-  flex: 0 0 28% !important;
-  width: 10% !important;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+word-wrap: break-word !important;
+white-space: unset !important;
+flex: 0 0 28% !important;
+width: 10% !important;
+overflow-wrap: break-word;
+word-wrap: break-word;
 
-  word-break: break-word;
+word-break: break-word;
 
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+-ms-hyphens: auto;
+-moz-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;
 }
 .mat-column-empName {
-  word-wrap: break-word !important;
-  white-space: unset !important;
-  flex: 0 0 28% !important;
-  width: 50% !important;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+word-wrap: break-word !important;
+white-space: unset !important;
+flex: 0 0 28% !important;
+width: 50% !important;
+overflow-wrap: break-word;
+word-wrap: break-word;
+color: var(--black);
+font-weight: 500;
+word-break: break-word;
 
-  word-break: break-word;
-
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+-ms-hyphens: auto;
+-moz-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;
 }
 .mat-column-dueDate {
-  word-wrap: break-word !important;
-  white-space: unset !important;
-  flex: 0 0 28% !important;
-  width: 20% !important;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+word-wrap: break-word !important;
+white-space: unset !important;
+flex: 0 0 28% !important;
+width: 20% !important;
+overflow-wrap: break-word;
+word-wrap: break-word;
 
-  word-break: break-word;
+word-break: break-word;
 
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+-ms-hyphens: auto;
+-moz-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;
 }
 .mat-column-lmsStatus {
-  word-wrap: break-word !important;
-  white-space: unset !important;
-  flex: 0 0 28% !important;
-  width: 15% !important;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+word-wrap: break-word !important;
+white-space: unset !important;
+flex: 0 0 28% !important;
+width: 15% !important;
+overflow-wrap: break-word;
+word-wrap: break-word;
 
-  word-break: break-word;
+word-break: break-word;
 
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+-ms-hyphens: auto;
+-moz-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;
 }
 
 .mat-no-data-row {
-  text-align: center;
+text-align: center;
 }
 
 .width-100{
-  width: 100%;
+width: 100%;
 }
 .width-50{
-  width: 50%;
+width: 50%;
+}
+::ng-deep .CardLayout thead tr{
+background-color: var(--drakblue);
+border: 1px solid #9bc3f3;
+height: 40px;
+}
+::ng-deep .CardLayout thead tr .mat-sort-header-content{
+color: var(--white);
+}
+
+::ng-deep .CardLayout thead tr th{
+font-size: 14px;
+font-weight: 500;
+color: var(--black);
+}
+::ng-deep .CardLayout tbody tr:nth-child(odd){
+background-color: var(--body_white);
+}
+::ng-deep .CardLayout tbody tr{
+height: 35px;
+}
+::ng-deep .CardLayout tbody tr:hover{
+background-color: var(--grey);
+}
+
+::ng-deep .CardLayout tbody tr td{
+font-size: 12px;
+}
+
+
+::ng-deep .CardLayout .mat-paginator-outer-container {
+display: flex;
+align-items: center;
+height: 40px;
+background: var(--grey);
+border-top: 1px solid var(--grey);
 }
